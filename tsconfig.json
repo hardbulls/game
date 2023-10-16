@@ -1,0 +1,16 @@
+{
+  "extends": "@tsconfig/next-strictest/tsconfig.json",
+  "compilerOptions": {
+    "module": "es2020",
+    "sourceMap": true,
+    "noEmit": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "downlevelIteration": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "strictPropertyInitialization": false
+  },
+  "include": [
+    "src"
+  ]
+}

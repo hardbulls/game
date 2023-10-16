@@ -1,0 +1,70 @@
+{
+  "name": "@hardbulls/game",
+  "version": "0.0.1",
+  "description": "Hard Bulls Baseballverein - Game",
+  "private": false,
+  "author": {
+    "name": "Arjan Frans",
+    "email": "arjanfrans.com@gmail.com",
+    "url": "https://arjanfrans.com"
+  },
+  "scripts": {
+    "build": "rm -rf ./dist && NODE_ENV=production webpack",
+    "start": "NODE_ENV=development webpack --watch",
+    "cs-ts": "eslint src --ext ts,tsx --fix",
+    "cs-format": "prettier 'src/**/*.ts' --write --no-semi --tab-width 4 --print-width=120",
+    "cs": "npm run cs-format && npm run cs-ts"
+  },
+  "files": [
+    "dist"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "root": true,
+    "rules": {
+      "@typescript-eslint/ban-ts-comment": [
+        "error",
+        {
+          "ts-ignore": "allow-with-description"
+        }
+      ],
+      "@typescript-eslint/no-explicit-any": [
+        "warn",
+        {
+          "ignoreRestArgs": false
+        }
+      ]
+    }
+  },
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hardbulls/game.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@tsconfig/next-strictest": "^1.0.1",
+    "@types/jsdom": "^21.1.1",
+    "@types/node": "^18.14.0",
+    "@types/react": "^18.0.28",
+    "@types/webpack-env": "^1.18.0",
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
+    "eslint": "^8.33.0",
+    "html-webpack-plugin": "^5.5.0",
+    "phaser": "^3.60.0",
+    "prettier": "^2.8.3",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
